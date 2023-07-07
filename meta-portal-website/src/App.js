@@ -15,12 +15,14 @@ import Home from "./components/homepage";
 const App = () => {
   return (
     <BrowserRouter>
-      <Navbar />
       <div className="App">
+        <Navbar />
+
         <Home />
+
+        <Footer />
       </div>
 
-      <Footer />
       <Routes>
         <Route></Route>
         {/* <Route path="/" element={<Home />} />
