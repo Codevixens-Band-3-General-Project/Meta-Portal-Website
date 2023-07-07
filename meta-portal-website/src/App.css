@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400&display=swap');
+.App {
+  text-align: center;
+  background-color:#2a0e3e;
+  min-height:100vh;
+  font-family:"Heebo";
+}
+.stats{
+  -webkit-text-stroke: 0.8px #e307eb;
+  text-shadow:
+   1px 1px 0.5px #4e04fc,
+   /* -1px 1px 0 #4e04fc, */
+  1px 0.8px 0 #4e04fc,
+  /* -0.8px 1px 0 #dc03f0, */
+  1px 1px 0 #c604d8;
+}
+
+
