@@ -19,7 +19,9 @@ function Home(props) {
           are stored as ERC-721 tokens on the Ethereum blockchain and hosted on
           IPFS.
         </p>
-
+              <Button onClick={() => console.log("Button clicked!")} className="ml-4">
+        BUY ON OPENSEA
+      </Button>
       </div>
       <Statistics />
     </div>
