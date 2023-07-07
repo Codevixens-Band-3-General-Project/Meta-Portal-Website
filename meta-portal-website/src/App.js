@@ -5,15 +5,9 @@ import React from 'react';
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from "./components/homepage";
 import About from './components/About';
+import Collections from './components/collections';
 // import Contact from './components/Contact';
-// import Collection from './components/Collection';
 // import Blog from './components/Blog';
-// import PictureCard from "./components/picture-card";
-// import HeaderCar from "./components/header-carousel";
-
-
-// import About from "./pages/About";
-
 
 
 const App = () => {
@@ -23,6 +17,7 @@ const App = () => {
 <Navbar />
 <Home/>
 <About/>
+<Collections/>
 
 <Footer/>
   <Routes>
