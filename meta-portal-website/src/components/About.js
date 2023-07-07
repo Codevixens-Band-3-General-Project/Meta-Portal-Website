@@ -13,10 +13,10 @@ function About() {
             <p>Your content goes here</p>
         </div> */}
 
-        
 <div className="w-1/2 flex flex-col justify-center sm:p-8 sm:w-4/5 text-center sm:mx-auto">
 <div className="right_in">
-  <h3 className="fn__maintitle" data-text="The Rise of Legends">The Rise of Legends</h3>
+  <h1 className="text-[#eff0f5] text-center sm:text-5xl drop-shadow-[0_2px_2px_#cc00ff] font-[300]" data-text="The Rise of Legends">The Rise of Legends</h1>
+
   <div className="fn_cs_divider">
     <div className="divider">
       <span />
@@ -24,10 +24,6 @@ function About() {
     </div>
   </div>
   <div className="flex flex-col justify-center sm:p-8 sm:w-4/5 text-center sm:mx-auto">
-{/* 
-  <div className="flex flex-col justify-center sm:p-8 sm:w-4/5 text-center sm:mx-auto">
-        <p className="text-[#9ba0b8] text-center text-base p-3 sm:p-10 sm:text-xl"> */}
-    {/* <p className="text-[#9ba0b8] text-center text-base p-3 sm:p-10 sm:text-xl"> */}
     <div className="text-[#9ba0b8] text-center text-base p-3 sm:p-10 sm:text-xl">
     <p> As the first hero of the Meta Legends, collection has over 9,999 unique skins drawn from the different missions and challenges he faced throughout his life.</p>
     <p>The artwork has been hand-drawned by Robert Green in the traditional anime style and composited by Layla Efiyo.</p>

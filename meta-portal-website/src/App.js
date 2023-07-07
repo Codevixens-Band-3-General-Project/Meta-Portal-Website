@@ -18,7 +18,7 @@ import About from './components/About';
 
 const App = () => {
   return (
-
+<div className="App">
 <BrowserRouter>
 <Navbar />
 <Home/>
@@ -37,6 +37,7 @@ const App = () => {
     <Route path="/" element={<Contact />} />  */}
   </Routes>
   </BrowserRouter>
+  </div>
   );
 };
 

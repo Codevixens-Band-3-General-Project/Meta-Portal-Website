@@ -5,7 +5,7 @@ import metalogo from '../images/metalogo.png'
 
 const Navbar = () => {
   return (
-    <nav className="bg-gray-800 p-4">
+    <nav className="bg-[#00000032] p-4">
       <div className="container mx-auto flex justify-between items-center">
         <img src={metalogo}/>
         <div className="mx-auto flex justify-center items-center">
