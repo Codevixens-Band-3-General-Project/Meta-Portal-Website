@@ -7,7 +7,6 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-800 p-4">
       <div className="container mx-auto flex justify-between items-center">
-        {/* <img src='assets/images/logo.png' alt='logo'/> */}
         <img src={metalogo}/>
         <div className="mx-auto flex justify-center items-center">
         <ul className='flex justify-center space-x-4 text-white'>
@@ -15,7 +14,7 @@ const Navbar = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/">About</Link>
+            <Link to="/about">About</Link>
           </li>
           <li>
             <Link to="/">Collection</Link>
