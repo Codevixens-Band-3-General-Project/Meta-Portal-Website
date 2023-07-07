@@ -3,7 +3,7 @@ import Button from "./Button";
 function Collections(props) {
   return (
     <div className="py-12">
-      <h1 className="text-[#eff0f5] text-center sm:text-4xl drop-shadow-[0_1px_1.3px_#cc00ff] font-[300] sm:py-8">
+      <h1 className="text-[#eff0f5] text-center sm:text-4xl drop-shadow-[0_1px_1.3px_#cc00ff] font-[300] sm:py-12">
         OUR COLLECTION
       </h1>
       {/* // NFT COLLECTIONS */}
