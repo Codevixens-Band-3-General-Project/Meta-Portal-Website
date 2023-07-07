@@ -1,6 +1,17 @@
 .App {
   text-align: center;
-  color:purple;
+  background-color:#2a0e3e;
+  min-height:100vh;
+  font-family:"Helvetica";
+}
+.stats{
+  -webkit-text-stroke: 0.8px #e307eb;
+  text-shadow:
+   1px 1px 0.5px #4e04fc,
+   /* -1px 1px 0 #4e04fc, */
+  1px 0.8px 0 #4e04fc,
+  /* -0.8px 1px 0 #dc03f0, */
+  1px 1px 0 #c604d8;
 }
 
 .App-logo {
@@ -14,26 +25,5 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
