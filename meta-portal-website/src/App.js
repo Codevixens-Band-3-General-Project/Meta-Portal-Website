@@ -18,7 +18,6 @@ const App = () => {
 <Home/>
 <About/>
 <Collections/>
-
 <Footer/>
   <Routes>
     <Route></Route>
