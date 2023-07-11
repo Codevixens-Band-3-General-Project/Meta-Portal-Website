@@ -5,6 +5,8 @@ import React from 'react';
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from "./components/homepage";
 import About from './components/About';
+import Contact from "./components/Contact";
+// import ContactForm from "./components/ContactForm";
 // import Contact from './components/Contact';
 // import Collection from './components/Collection';
 // import Blog from './components/Blog';
@@ -23,6 +25,9 @@ const App = () => {
 <Navbar />
 <Home/>
 <About/>
+{/* <Divider/> */}
+<Contact/>
+{/* <ContactForm/> */}
 
 <Footer/>
   <Routes>
