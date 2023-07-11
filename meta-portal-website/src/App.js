@@ -1,12 +1,14 @@
+import React from "react";
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/homepage";
 import About from "./components/About";
+import Article from "./components/Articles";
 import Collections from "./components/collections";
-import PageDivider from "./components/page_divider";
+import Roadmap from "./components/roadmap";
+import { PageDivider } from "./components/Divider";
 // import Contact from './components/Contact';
 // import Blog from './components/Blog';
 
@@ -19,6 +21,10 @@ const App = () => {
         <About />
         <PageDivider />
         <Collections />
+        <PageDivider />
+        <Roadmap />
+        <PageDivider />
+        <Article />
         <PageDivider />
         <Footer />
         <Routes>
