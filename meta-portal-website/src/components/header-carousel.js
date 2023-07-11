@@ -1,4 +1,4 @@
-import PictureCard from "./picture-card";
+import {PictureCard} from "./Cards";
 function HeaderCar(props) {
   return (
     <div className="card flex flex-col sm:flex-row justify-around p-10">
