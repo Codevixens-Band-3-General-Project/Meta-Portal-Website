@@ -4,16 +4,18 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Home from "./components/homepage";
-import About from "./components/About";
+import About from './components/About';
+import Contact from "./components/Contact";
 import Article from "./components/Articles";
 import Collections from "./components/collections";
 import Roadmap from "./components/roadmap";
 import { PageDivider } from "./components/Divider";
-// import Contact from './components/Contact';
+
 // import Blog from './components/Blog';
 
 const App = () => {
   return (
+
     <div className="App">
       <BrowserRouter>
         <Navbar />
@@ -22,6 +24,8 @@ const App = () => {
         <PageDivider />
         <Collections />
         <PageDivider />
+        <Divider/>
+        <Contact/>
         <Roadmap />
         <PageDivider />
         <Article />
@@ -32,6 +36,7 @@ const App = () => {
 
           {/* <Route path="/about" element={<About />}/> */}
           {/* <Route path="/" element={<Home />} />
+
     <Route path="/" element={<About />}/>
     <Route path="/" element={<Collection/>} /> 
     <Route path="/" element={<Blog/>} /> 
