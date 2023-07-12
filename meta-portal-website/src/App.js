@@ -24,12 +24,13 @@ const App = () => {
         <PageDivider />
         <Collections />
         <PageDivider />
-        <Divider/>
-        <Contact/>
+        {/* <Divider/> */}
+    
         <Roadmap />
         <PageDivider />
         <Article />
         <PageDivider />
+        <Contact/>
         <Footer />
         <Routes>
           <Route></Route>
