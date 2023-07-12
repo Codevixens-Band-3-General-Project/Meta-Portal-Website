@@ -59,10 +59,10 @@ function Phaseindicator() {
         <hr className="border-t border-slate-50/10"></hr>
       </div>
       <div className="absolute inset-x-0 top-6 flex justify-between px-12 w-[83%]">
-        <div className="bg-[#2e0627a4] border-4 rounded-full w-2 p-1 border-violet-500 ml-10"></div>
-        <div className=" bg-[#2e0627a4] border-4 rounded-full w-2 p-1 border-violet-500 ml-8"></div>
-        <div className="bg-[#2e0627a4] border-4 rounded-full w-2 p-1 border-violet-500 ml-8"></div>
-        <div className="bg-[#2e0627a4] border-4 rounded-full w-2 p-1 border-violet-500 ml-8"></div>
+        <div className="bg-[#140311b4] border-4 rounded-full w-2 p-1 border-t-fuchsia-600 border-r-fuchsia-600 border-b-fuchsia-600 border-l-fuchsia-600 ml-10"></div>
+        <div className="bg-[#140311b4] border-4 rounded-full w-2 p-1 border-t-fuchsia-600 border-r-fuchsia-600 border-b-fuchsia-600 border-l-fuchsia-600 ml-8"></div>
+        <div className="bg-[#140311b4] border-4 rounded-full w-2 p-1 border-t-fuchsia-600 border-r-fuchsia-600 border-b-fuchsia-600 border-l-fuchsia-600 ml-8"></div>
+        <div className="bg-[#140311b4] border-4 rounded-full w-2 p-1 border-t-fuchsia-600 border-r-fuchsia-600 border-b-fuchsia-600 border-l-fuchsia-600 ml-8"></div>
       </div>
     </div>
   );
