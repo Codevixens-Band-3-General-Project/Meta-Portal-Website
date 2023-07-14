@@ -1,4 +1,4 @@
-// import PictureCard from "./picture-card";
+
 import HeaderCar from "./header-carousel";
 import Statistics from "./statistics";
 import Button from "./Button";
