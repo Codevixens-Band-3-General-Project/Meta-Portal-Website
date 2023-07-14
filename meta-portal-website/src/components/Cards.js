@@ -20,10 +20,11 @@ export const TextCard = (props) => {
 };
 
 // PICTURE CARD
-export const PictureCard = ({ img }) => {
+export const PictureCard = ({ img,className}) => {
   return (
-    <div className="bg-transparent rounded-lg w-2/8 border border-[#ffffff35] p-5">
-      <img src={img} alt="nft images" className="rounded-lg" />
+    <div className={`bg-transparent rounded-lg w-2/8 border border-[#ffffff35] p-5 ${className}`}>
+      <img src={img} alt="nft images" className={`rounded-lg ${className}`}  />
+
     </div>
   );
 };
@@ -47,4 +48,22 @@ export const MintCard = ({ num, text }) => {
       </div>
     </div>
   );
-};
+}
+
+// export const WalletCard = ({img}) =>{
+//   return (
+//     <div className="item flex items-center">
+//     <Link to="/" className="flex items-center">
+//       <span className="icon">
+//         <img src={img} alt="" />
+//       </span>
+//       <span className="text">{text}</span>
+//     </Link>
+//   </div>
+//   )
+
+
+//   }
+
+;
+
