@@ -9,6 +9,7 @@ const Navbar = () => {
 
   const walletSidebar = () => {
     setWalletSidebarOpen(!walletSidebarOpen)
+    console.log("walletsidebar")
 
   }
   return (

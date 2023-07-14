@@ -18,9 +18,9 @@ function About() {
   }
   return (
     <>
-      <div class="flex">
+      <div className="flex">
         <div className="w-1/2 relative">
-            <img src={Leaf} alt="Leaf Image" class="w-full" />
+            <img src={Leaf} alt="Leaf Image" className="w-full" />
 
             <div className="absolute inset-y-0 right-12 flex items-center">
                 <PictureCard img={require("../images/nft.png")} className="w-[90%]" />
