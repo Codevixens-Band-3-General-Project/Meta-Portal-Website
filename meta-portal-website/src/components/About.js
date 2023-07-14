@@ -18,21 +18,14 @@ function About() {
   }
   return (
     <>
-      <div class="flex">
-        
-
+      <div className="flex">
         <div className="w-1/2 relative">
-       
-          <img src={Leaf} alt="Leaf Image" class="w-full" />
+            <img src={Leaf} alt="Leaf Image" className="w-full" />
 
-        {/* <div class="absolute top-30 right-50 w-full h-full"> */}
-        {/* <div class="transform translate-y-6 sm:-translate-y-6 md:translate-y-2 w-full slg:-translate-y-8 xl:translate-y-0..."> */}
-        <div class="absolute inset-0 flex items-center justify-ends">
-      <div class="w-11/12 h-11/12">
-        <PictureCardsmall img={require("../images/nft.png")} />
+            <div className="absolute inset-y-0 right-12 flex items-center">
+                <PictureCard img={require("../images/nft.png")} className="w-[90%]" />
+            </div>
         </div>
-    </div>
-    </div>
    
 
             <div className="w-1/2 flex flesx-col justify-center ssm:p-8 sm:w-4/5 text-center sm:mx-auto">
@@ -60,15 +53,13 @@ function About() {
           </div>
 </div>
 
-{/* <div className="flex"> */}
+
   
 <div className="flex justify-center py-10 px-6 sm:px-12 sm:py-12 gap-y-3 ">
 <div className="flex flex-col-1 gap-y-5 w-[50%] ">
-  {/* <div className="w-1/2 flex flex-col justify-center p-8 mx-auto sm:w-4/5 text-center"> */}
     <div className="right_in">
       <h1 className="text-[#eff0f5] text-5xl drop-shadow-[0_2px_2px_#cc00ff] font-light" data-text="The Rise of Legends">How to Mint</h1>
       <br/>
-      {/* <Divider/> */}
       <div className="fn_cs_divider">
         <div className="divider">
           <span></span>
@@ -87,7 +78,6 @@ function About() {
     </div>
   </div>
 
-  {/* <div className="w-1/2 py-10 px-6 sm:px-8 sm:py-12 gap-y-3 "> */}
   <div className="flex flex-col-1 gap-y-5 w-[50%] ">
   <div className="grid grid-cols-2 gap-12">
     <MintCard

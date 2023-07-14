@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import Button from './Button';
 import metalogo from '../images/metalogo.png'
+import WalletSidebar from './WalletSidebar';
 
 const Navbar = () => {
+  const[walletSidebarOpen,setWalletSidebarOpen] = useState(false)
+
+  const walletSidebar = () => {
+    setWalletSidebarOpen(!walletSidebarOpen)
+    console.log("walletsidebar")
+
+  }
   return (
     <nav className="bg-[#00000032] p-4">
       <div className="container mx-auto flex justify-between items-center">
@@ -29,10 +37,12 @@ const Navbar = () => {
          
         </div>
         <div>
-        <Button onClick={() => console.log('Button clicked!')} className="ml-4">CONNECT TO WALLET</Button>
+        <Button onClick={walletSidebar} className="ml-4">CONNECT TO WALLET</Button>
 
         </div>
       </div>
+      {walletSidebarOpen && <WalletSidebar/>}
+
     </nav>
    
   );
