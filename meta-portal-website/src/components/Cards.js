@@ -20,17 +20,17 @@ export const TextCard = (props) => {
 };
 
 // PICTURE CARD
-export const PictureCard = ({ img, className }) => {
+export const PictureCard = ({ img, style }) => {
   return (
-    <div className={`bg-transparent rounded-lg w-2/8 border border-[#ffffff35] p-5 ${className}`}>
-      <img src={img} alt="nft images" className="rounded-lg" />
+    <div className={`bg-transparent rounded-2xl w-2/8 border border-[#ffffff35] p-5 ${style}`}>
+      <img src={img} alt="nft images" className="rounded-2xl" />
     </div>
   );
 };
 export const PictureCardsmall = ({ img }) => {
   return (
-    <div className="bg-transparent rounded-lg w-2/8 sm:w-2/5 border border-[#ffffff35] p-3">
-      <img src={img} alt="nft images" className="rounded-lg" />
+    <div className="bg-transparent rounded-2xl w-2/8 sm:w-2/5 border border-[#ffffff35] p-3">
+      <img src={img} alt="nft images" className="rounded-2xl" />
     </div>
   );
 };
