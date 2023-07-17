@@ -1,22 +1,23 @@
 import Slider from "react-slick";
 function Phase() {
   const settings = {
-    dots: true,
+    arrows:false,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 2500,
     infinite: true,
     lazyload: true,
-    centerMode: true,
     speed: 300,
     centerPadding: 0,
+    adaptiveHeight:false,
     slidesToShow: 4,
+    className: "roadmap",
   };
 
   // className="flex justify-evenly sm:p-5 sm:gap-x-7 sm:mx-8"
 
   return (
-    <div className="w-[90%] sm:p-5 mx-auto">
-      <Slider {...settings} className="">
+    <div className="w-[92%] mx-auto h-auto items-center">
+      <Slider {...settings} className="roadmap">
         <RoadmapCards
           phase={`PHASE ${0}${1}`}
           date={`October ${0}${9}, ${2022}`}
@@ -60,11 +61,11 @@ function Phase() {
 
 function RoadmapCards(props) {
   return (
-    <div className="bg-transparent rounded-lg w-2/8 sm:w-3/12 border border-[#ffffff35] pb-5 text-[#88888a]">
+    <div className="bg-transparent rounded-lg max-h-[40rem]  border border-[#ffffff35] pb-5 text-[#7d7db4]">
       <p className="text-[#9ba0b8] bg-[#ffffff1a] w-[60%] px-[2rem] py-2 rounded-tl-lg rounded-br-lg">
         {props.phase}
       </p>
-      <div className="flex flex-col gap-y-3 py-8 px-8 text-left">
+      <div className="flex flex-col gap-y-3 py-8 px-6 text-left">
         <p>{props.date}</p>
         <h4 className="text-white ">{props.heading}</h4>
         <p>

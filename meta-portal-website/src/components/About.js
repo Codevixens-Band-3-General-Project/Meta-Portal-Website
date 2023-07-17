@@ -14,8 +14,14 @@ function About() {
   const [isVideoPlaying,setVideoPlaying] = useState(false)
 
   const handlePlayVideo = () =>{
+    setVideoPlaying(true)
     
   }
+
+  const handleStopVideo = () => {
+    setVideoPlaying(false);
+  };
+
   return (
     <>
       <div className="flex">
@@ -104,13 +110,27 @@ function About() {
     />
     </div>
 
-
-    
+    {isVideoPlaying ? (
+        <div className="video-container">
+          <iframe
+            width="700"
+            height="315"
+            src="https://www.youtube.com/embed/7e90gBu4pas"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+            <button onClick={handleStopVideo} className="absolute bottom-2 right-2 px-4 py-2 bg-red-600 text-white rounded">
+            X
+          </button>
+        </div>
+      ) : (
 <div className="awt-tv relative col-span-2">
   <div className="explore-area">
     <img src={videoImg} alt="Video Image" className="img-fluid w-full h-auto"/>
     <div className="explore-btn absolute inset-0 flex justify-center items-center" id="button1">
-      <span data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <span data-bs-toggle="modal" data-bs-target="#exampleModal"  onClick={handlePlayVideo}>
         <svg width={100} height={60} viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fillRule="evenodd" clipRule="evenodd" d="M22.3958 0C10.027 0 0 10.027 0 22.3958C0 34.7647 10.027 44.7917 22.3958 44.7917C34.7647 44.7917 44.7917 34.7647 44.7917 22.3958C44.7917 10.027 34.7647 0 22.3958 0ZM3.125 22.3958C3.125 11.7528 11.7528 3.125 22.3958 3.125C33.0388 3.125 41.6667 11.7528 41.6667 22.3958C41.6667 33.0388 33.0388 41.6667 22.3958 41.6667C11.7528 41.6667 3.125 33.0388 3.125 22.3958Z" fill="white" />
           <path d="M27.607 21.5013L19.1325 17.2641C18.3346 16.8651 17.3958 17.4453 17.3958 18.3374V26.4541C17.3958 27.3462 18.3346 27.9264 19.1325 27.5274L27.607 23.2902C28.344 22.9217 28.344 21.8698 27.607 21.5013Z" fill="white" stroke="white" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
@@ -119,12 +139,8 @@ function About() {
     </div>  
   </div>
 </div>
+ )}
 </div>
-
-
-   
-
-
 
   </div>
 </div>

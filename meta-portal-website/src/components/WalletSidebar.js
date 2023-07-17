@@ -1,37 +1,52 @@
 import React from "react";
+import { WalletCard } from "./Cards";
 
-const WalletSidebar = () => {
-
-
+const WalletSidebar = ({ isOpen ,onClose }) => {
+  const handleWalletSelection = () =>{
+    onClose();
+  }
   return (
-<div classname="walletbox">
-  <div classname="title_holder">
-    <h3>Connect Wallet</h3>
-    <p>
-      Connect with one of our available wallet providers or create a new
-      one.
-    </p>
-  </div>
-  <div classname="list_holder">
-    <WalletSidebar
-    img={require("../images/metamask.png")}
-    text={"METAMASK"}/>
-
-    <WalletSidebar
-    img={require("../images/coinbase.png")}
-    text={"COINBASE"}/>
-
-    <WalletSidebar
-    img={require("../images/walletconnect.png")}
-    text={"WALLET CONNECT"}/>
-
-    <WalletSidebar
-    img={require("../images/venly.png")}
-    text={"VENLY"}/>
-  </div>
-</div>
-
-     
+    isOpen && (
+      <div className="walletbox text-white">
+        <div className="title_holder">
+          <h1 className="pb-8 text-2xl">Connect Wallet</h1>
+          <p>Connect with one of our available wallet</p>
+           <p className="pb-8">providers or create a new one.</p>
+        </div>
+        <div className="list_holder flex flex-col items-center justify-between gap-y-6 pb-8">
+ 
+          <div>
+            <WalletCard  
+              img={require("../images/metamask.png")}
+              text={"METAMASK"}
+              onClick={handleWalletSelection}
+            />
+           
+          </div>
+          <div>
+            <WalletCard
+              img={require("../images/coinbase.png")}
+              text={"COINBASE"}
+              onClick={handleWalletSelection}
+            />
+          </div>
+          <div>
+            <WalletCard
+              img={require("../images/walletconnect.png")}
+              text={"WALLET CONNECT"}
+              onClick={handleWalletSelection}
+            />
+          </div>
+          <div>
+            <WalletCard
+              img={require("../images/venly.png")}
+              text={"VENLY"}
+              onClick={handleWalletSelection}
+            />
+          </div>
+        </div>
+      </div>
+    )
   );
 };
 
