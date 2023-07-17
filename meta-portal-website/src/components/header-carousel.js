@@ -17,7 +17,7 @@ function HeaderCar(props) {
   const NextArrow = ({ onClick }) => {
     return (
       <div
-        className="arrow next bg-white cursor-pointer rounded-full p-1"
+        className="arrow next bg-transparent border border-[#ffffff35] cursor-pointer rounded-full py-1 px-2 text-[#fff]"
         onClick={onClick}
       >
         {">"}
@@ -28,7 +28,9 @@ function HeaderCar(props) {
   const PrevArrow = ({ onClick }) => {
     return (
       <div
-        className="arrow prev bg-white cursor-pointer rounded-full p-1"
+        // className="arrow prev bg-white cursor-pointer rounded-full p-1"
+        className="arrow next bg-transparent border border-[#ffffff35] cursor-pointer rounded-full py-1 px-2 text-[#fff]"
+
         onClick={onClick}
       >
         {"<"}
@@ -37,7 +39,7 @@ function HeaderCar(props) {
   };
   const settings = {
     // dots: true,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000,
     infinite: true,
     lazyload: true,
@@ -45,7 +47,7 @@ function HeaderCar(props) {
     // className:"center",
     // arrows:true,
     speed: 300,
-    centerPadding: "10px",
+    centerPadding: "30px",
     slidesToShow: 3,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
@@ -70,7 +72,7 @@ function HeaderCar(props) {
 
   // className="card flex flex-col sm:flex-row justify-around p-10"
   return (
-    <div className="w-[100%] sm:w-[80%] mx-auto sm:py-10">
+    <div className="w-[100%] sm:w-[80%] mx-auto sm:py-10 h-[500px]">
       <Slider {...settings}>
         {images.map((image, index) => (
           <PictureCard

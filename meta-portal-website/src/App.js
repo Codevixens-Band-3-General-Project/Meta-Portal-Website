@@ -11,6 +11,7 @@ import Collections from "./components/collections";
 import Roadmap from "./components/roadmap";
 import { PageDivider } from "./components/Divider";
 import ScrollToTop from "./components/ScrollToTop";
+// import WalletSidebar from "./components/WalletSidebar";
 
 // import Blog from './components/Blog';
 
@@ -32,8 +33,10 @@ const App = () => {
         <Article />
         <PageDivider />
         <Contact/>
+        {/* <WalletSidebar/> */}
         <ScrollToTop/>
         <Footer />
+       
         <Routes>
           <Route></Route>
 
