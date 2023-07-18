@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 // BLOG CARD
 export const TextCard = (props) => {
   const { num, date, img, heading, text, borderRadius } = props;
@@ -47,4 +48,33 @@ export const MintCard = ({ num, text }) => {
       </div>
     </div>
   );
-};
+}
+export const WalletCard = ({img,text}) =>{
+  return (
+    <div className='border-2 border-purple-600 flex flex-col items-center gap-y-3 py-8 px-3 w-48'>
+      <img src={img} alt="img"/>
+      <p>{text}</p>
+      
+    </div>
+  )
+}
+
+// export const WalletCard = ({img,text}) =>{
+//   return (
+//     <div className="absolutew-200 mx-auto px-23 py-17 bg-gray-900 flex items-center flex-col ">
+//     <Link to="/" className="absolute block top-0 left-0 right-0 bottom-0 z-15" />
+//     <span className="icon w-50 h-50 bg-black flex items-center justify-center rounded-full relative mb-9">
+//       <img src={img} alt="" className="z-5" />
+//     </span>
+//     <span className="text text-base font-medium uppercase text-gray-100">
+//       {text}
+//     </span>
+//   </div>
+
+//   )
+
+
+//   }
+
+;
+

@@ -39,7 +39,9 @@ cursor-pointer rounded-full text-[#fff]"
   const PrevArrow = ({ onClick }) => {
     return (
       <div
-        className="arrow prev bg-white cursor-pointer rounded-full p-1"
+        // className="arrow prev bg-white cursor-pointer rounded-full p-1"
+        className="arrow next bg-transparent border border-[#ffffff35] cursor-pointer rounded-full py-1 px-2 text-[#fff]"
+
         onClick={onClick}
       >
         {"<"}
@@ -49,14 +51,14 @@ cursor-pointer rounded-full text-[#fff]"
   const settings = {
     // dots: true,
     // autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
     infinite: true,
     lazyload: true,
     centerMode: true,
     // className:"center",
     // arrows:true,
     speed: 300,
-    centerPadding: 0,
+    centerPadding: "10px",
     slidesToShow: 3,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
