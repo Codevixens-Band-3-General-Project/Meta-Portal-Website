@@ -2,14 +2,14 @@
 export const TextCard = (props) => {
   const { num, date, img, heading, text, borderRadius } = props;
   return (
-    <div className="text-[#9ba0b8] flex flex-col gap-y-4 text-left px-10 py-10 bg-transparent rounded-lg w-[96%] border border-[#ffffff35] shadow-[0_5px_20px_rgba(0,0,0,0.25)">
+    <div className="text-[#9ba0b8] flex flex-col gap-y-4 text-left px-8 py-8 sm:px-10 sm:py-10 bg-transparent rounded-lg sm:w-[96%] border border-[#ffffff35] shadow-[0_5px_20px_rgba(0,0,0,0.25)">
       <div className="border-2 rounded-full p-1 w-10 border-t-fuchsia-600 border-r-fuchsia-600 border-b-fuchsia-600 border-l-fuchsia-600">
         <p className="px-[0.33rem] py-[0.20rem] text-[1rem] text-center">
           {num}
         </p>
       </div>
-      <p>{date}</p>
-      <h3 className="text-[#eff0f5] text-2xl hover:text-fuchsia-600 hover:cursor-pointer">
+      <p className="text-sm sm:text-base">{date}</p>
+      <h3 className="text-[#eff0f5] text-lg sm:text-2xl hover:text-fuchsia-600 hover:cursor-pointer">
         {heading}
       </h3>
       <img src={img} style={{ borderRadius }} />
