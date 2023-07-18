@@ -10,7 +10,7 @@ function Article() {
       {/*ARTICLES */}
 
       <div className="flex flex-col sm:flex-row justify-center py-6 sm:px-8 sm:py-12 md:py-12 gap-y-3 ">
-        <div className="flex sm:flex-col-1 gap-y-5 sm:w-[50%] pt-6 ">
+        <div className="flex sm:flex-col-1 gap-y-5 sm:w-[50%] pt-6 sm:pt-0">
           <TextCard
             num={`${0}${1}`}
             date={"August 09, 2022 / MetaVerse / 4 Comment"}
@@ -39,10 +39,10 @@ function Article() {
       </div>
 
       {/* Button to read */}
-      <div className="flex flex-col sm:flex-row justify-between gap-y-3 sm:px-12 sm:gap-x-8 pb-12 ">
+      <div className="flex flex-col sm:flex-row justify-between gap-y-3 sm:px-12 sm:gap-x-10 pb-12 ">
         <Button
           onClick={() => console.log("Button clicked!")}
-          className="sm:w-[50%] py-3 sm:py-2 text-sm"
+          className="sm:w-[49%] py-3 sm:py-2 text-sm"
         >
           READ ALL ARTICLES
         </Button>

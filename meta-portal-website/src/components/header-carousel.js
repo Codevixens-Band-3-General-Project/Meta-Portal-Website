@@ -17,20 +17,16 @@ function HeaderCar(props) {
   const NextArrow = ({ onClick }) => {
     return (
       <div
-        className="flex arrow next py-2
-cursor-pointer rounded-full text-[#fff]"
+        className=" arrow next
+cursor-pointer rounded-full text-[#ffffff79] text-base"
         onClick={onClick}
       >
-        <div className="flex flex-row justify-between gap-x-4 px-5">
+        <div className="flex flex-row items-center justify-between gap-x-4 ">
           <div className="bg-[#e7e5e505] rounded-full w-1/8 border-2 border-[#ffffff79] p-1"></div>
-          <div className="bg-[#e7e5e505] rounded-full border-2 border-[#ffffff79] px-2 py-1">
-            
+          <div className="bg-[#e7e5e505] rounded-full border-2 border-[#ffffff79] px-3 py-1">
             {">"}
           </div>
           <div className="bg-[#e7e5e505] rounded-full w-1/8 border-2 border-[#ffffff79] p-1"></div>
-        </div>
-        <div className="w-2/5 border-t border-gray-500    ">
-          <span className="h-1 w-15 bg-gray-500"></span>
         </div>
       </div>
     );
@@ -39,12 +35,17 @@ cursor-pointer rounded-full text-[#fff]"
   const PrevArrow = ({ onClick }) => {
     return (
       <div
-        // className="arrow prev bg-white cursor-pointer rounded-full p-1"
-        className="arrow next bg-transparent border border-[#ffffff35] cursor-pointer rounded-full py-1 px-2 text-[#fff]"
-
+        className="arrow prev 
+cursor-pointer text-[#ffffff79]"
         onClick={onClick}
       >
-        {"<"}
+        <div className="flex flex-row items-center justify-between gap-x-4 ">
+          <div className="bg-[#e7e5e505] rounded-full w-1/8 border-2 border-[#ffffff79] p-1"></div>
+          <div className="bg-[#e7e5e505] rounded-full border-2 border-[#ffffff79] px-3 py-1">
+            {"<"}
+          </div>
+          <div className="bg-[#e7e5e505] rounded-full w-1/8 border-2 border-[#ffffff79] p-1"></div>
+        </div>
       </div>
     );
   };
@@ -58,7 +59,7 @@ cursor-pointer rounded-full text-[#fff]"
     // className:"center",
     // arrows:true,
     speed: 300,
-    centerPadding:0,
+    centerPadding: 0,
     slidesToShow: 3,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
@@ -87,7 +88,7 @@ cursor-pointer rounded-full text-[#fff]"
         {images.map((image, index) => (
           <PictureCard
             img={image}
-            className={index === ImageIndex ? "slide activeSlide" : "slide"}
+            className={`index === ImageIndex ? "slide activeSlide" : "slide"  min-h-[15rem]`}
           />
         ))}
       </Slider>

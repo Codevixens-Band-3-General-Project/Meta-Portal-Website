@@ -31,11 +31,11 @@
 }
 .next {
   left: 60%;
-  top: 100%;
+  top: 120%;
 }
 .prev {
   /* left:0; */
-  top: 100%;
+  top: 120%;
   right: 60%;
 }
 /* .slick-slider {
@@ -44,7 +44,8 @@
   overflow-y: visible !important;
 } */
 .slide {
-  transform: skewX(3deg) skewY(-20deg) rotate(4deg) translateY(-28px) scale(0.92);
+  transform: skewX(3deg) skewY(-10deg) rotate(4deg) translateY(-10px)
+    scale(0.98);
   /* transform: scaleX(0.85) scaleY(0.85) rotateY(30deg); */
   /* transform-style:preserve-3d; */
   transition: transform 300ms;
@@ -57,6 +58,22 @@
   z-index: 10;
   position: absolute;
 }
+.flip-card {
+  /* position:absolute; */
+  transform-style: preserve-3d;
+}
+.flip-card:hover{
+  transform: rotateY(180deg);
+}
+.front {
+  /* position: absolute; */
+  backface-visibility: hidden;
+}
+.back {
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);;
+}
 /* .imageSlider,
 .slick-list {
   height: 100%;
@@ -64,9 +81,9 @@
 /* .slick-list {
   /* overflow-y: visible ;
   overflow-x: hidden ; */
-  /* height: 400px !important; */
-  /* padding: 3.5rem 2rem !important; */
-  /* display: flex; 
+/* height: 400px !important; */
+/* padding: 3.5rem 2rem !important; */
+/* display: flex; 
   align-items:center;
 } */
 /* .roadmap {
