@@ -9,7 +9,7 @@ function Statistics(props) {
 
   return (
     <ScrollTrigger onEnter={() =>setCounterOn(true)} onExit={() =>setCounterOn(false)}>
-    <div className="card flex flex-col sm:flex-row justify-around my-10 sm:px-12 sm:my-12 sm:py-12 border-t border-b border-[#ffffff21] bg-[#00000026]">
+    <div className="card flex flex-col sm:flex-row justify-around my-8 sm:px-12 sm:my-12 sm:py-12 border-t border-b border-[#ffffff21] bg-[#00000026]">
       <div className="card flex flex-col gap-2 py-12">
         <h1 className="text-4xl font-[800] text-[#17091d] text-center stats">
           {counterOn &&<CountUp start={1000} end ={9999} duration={2} delay={0}/>}

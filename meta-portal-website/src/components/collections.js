@@ -15,8 +15,12 @@ function Collections(props) {
       </h1>
       {/* // NFT COLLECTIONS */}
       <div className=" py-10 px-2 sm:px-8 sm:py-12 md:px-12 gap-y-3">
-        <div className="card flex gap-y-4 sm:items-end flex-col sm:flex-row justify-around sm:px-12 gap-x-6 sm:py-3 ">
-          <PictureCard img={avt4} />
+        <div className="relative flex gap-y-4 sm:items-end flex-col sm:flex-row justify-around sm:px-12 gap-x-6 sm:py-3 ">
+          <PictureCard
+            img={avt4}
+            className="front hover:rotateY-180"
+            style={{ transformStyle: "preserve-3d" }}
+          />
           <PictureCardsmall img={avt2} />
           <PictureCard img={avt3} />
           <PictureCardsmall img={avt4} />
@@ -35,7 +39,10 @@ function Collections(props) {
           are stored as ERC-721 tokens on the Ethereum blockchain and hosted on
           IPFS.
         </p>
-        <Button onClick={() => console.log("Button clicked!")} className="text-sm">
+        <Button
+          onClick={() => console.log("Button clicked!")}
+          className="text-sm"
+        >
           SEE ALL COLLECTION
         </Button>
       </div>
