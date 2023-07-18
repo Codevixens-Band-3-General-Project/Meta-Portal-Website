@@ -29,7 +29,7 @@ function About() {
             <img src={Leaf} alt="Leaf Image" className="w-full" />
 
             <div className="absolute inset-y-0 right-12 flex items-center">
-                <PictureCard img={require("../images/nft.png")} className="w-[90%]" />
+                <PictureCard img={require("../images/avt5.jpg")} className="w-[90%]" />
             </div>
         </div>
    

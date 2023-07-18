@@ -50,15 +50,15 @@ cursor-pointer rounded-full text-[#fff]"
   };
   const settings = {
     // dots: true,
-    // autoplay: true,
-    autoplaySpeed: 2000,
+    autoplay: true,
+    autoplaySpeed: 3000,
     infinite: true,
     lazyload: true,
     centerMode: true,
     // className:"center",
     // arrows:true,
     speed: 300,
-    centerPadding: "10px",
+    centerPadding:0,
     slidesToShow: 3,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
@@ -82,7 +82,7 @@ cursor-pointer rounded-full text-[#fff]"
 
   // className="card flex flex-col sm:flex-row justify-around p-10"
   return (
-    <div className="w-[100%] sm:w-[80%] mx-auto sm:py-10 min-h-[30rem]">
+    <div className="w-[100%] sm:w-[80%] mx-auto sm:py-10 min-h-[27rem]">
       <Slider {...settings}>
         {images.map((image, index) => (
           <PictureCard
