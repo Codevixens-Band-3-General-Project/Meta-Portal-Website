@@ -18,10 +18,10 @@ import ScrollToTop from "./components/ScrollToTop";
 const App = () => {
   return (
     <div className="App">
-      <div className= " relative">
+      {/* <div className= "relative"> */}
 
-      <div className="blur w-[50%] sm:w-[60%] rounded-full  mx-auto"></div>
-      </div>
+      <div className="blob w-[90%] sm:w-[60%] h-[400px] rounded-full fixed top-0 right-0 left-0 bottom-0 -z-[1] blur-3xl bg-opacity-10 bg-gradient-to-r sm:bg-gradient-to-tr  from-[#6c04b19c] to-[#9f0bc4d8] mx-auto "></div>
+      {/* </div> */}
       <BrowserRouter>
         <Navbar />
         <Home />

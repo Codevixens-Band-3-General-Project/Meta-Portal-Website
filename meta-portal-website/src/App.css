@@ -10,14 +10,18 @@
 }
 .App {
   text-align: center;
-  background-color: #3b0361;
+  /* background-color: #3b0361; */
+  /* background-color: #2a0d3d; */
+  background-color: #3e0a61ee;
+  /* background: linear-gradient(90deg, #5c025f 0, #760792 60%, #5c025f 100%); */
   position: relative;
-  /* z-index: 0; */
+  /* filter: blur(10px); */
+  z-index: 0;
   min-height: 100vh;
   font-family: "Heebo", sans-serif;
 }
 .stats {
-  -webkit-text-stroke: 0.8px #e307eb;
+  -webkit-text-stroke: 1.2px #e504ec;
   text-shadow: 1px 1px 0.5px #4e04fc,
     /* -1px 1px 0 #4e04fc, */ 1px 0.8px 0 #4e04fc,
     /* -0.8px 1px 0 #dc03f0, */ 1px 1px 0 #c604d8;
