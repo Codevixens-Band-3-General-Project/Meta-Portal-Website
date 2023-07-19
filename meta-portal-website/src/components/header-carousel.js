@@ -9,7 +9,6 @@ import { PictureCard } from "./Cards";
 import { useState } from "react";
 
 const images = [avt1, avt2, avt3, avt4, avt5, avt6];
-// const slider = React.useRef(null);
 
 function HeaderCar(props) {
   // const [sliderRef, setSliderRef] = useState(null);
@@ -50,21 +49,21 @@ cursor-pointer text-[#ffffff79]"
     );
   };
   const settings = {
-    // dots: true,
     autoplay: true,
     autoplaySpeed: 3000,
     infinite: true,
     lazyload: true,
     centerMode: true,
-    // className:"center",
-    // arrows:true,
     speed: 300,
     centerPadding: 0,
     slidesToShow: 3,
+    // className: "carousel",
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     // adaptiveHeight: true,
-    beforeChange: (current, next) => setImageIndex(next),
+    beforeChange: (current, next) => {
+      setImageIndex(next);
+    },
     responsive: [
       // {
       //   breakpoint:1024,
@@ -83,18 +82,26 @@ cursor-pointer text-[#ffffff79]"
 
   // className="card flex flex-col sm:flex-row justify-around p-10"
   return (
-    <div className="w-[100%] sm:w-[80%] mx-auto sm:py-10 min-h-[27rem]">
+    <div className="w-[100%] sm:w-[80%] mx-auto sm:py-10 min-h-[25rem] sm:min-h-[28rem]">
       <Slider {...settings}>
-        {images.map((image, index) => (
-          <PictureCard
-            img={image}
-            className={`index === ImageIndex ? "slide activeSlide" : "slide"  min-h-[15rem]`}
-          />
-        ))}
+        {images.map((image, index) => {
+          const isActive = ImageIndex === index;
+          const isBefore =
+            ImageIndex === index - 1 ||
+            (ImageIndex === 0 && index === images.length - 1);
+          const isAfter =
+            ImageIndex === index + 1 ||
+            (ImageIndex === images.length - 1 && index === 0);
+          return (
+            <PictureCard
+              img={image}
+              className={`min-h-[15rem] ${isActive ? "activeSlide" : ""} ${
+                isBefore ? "before" : ""
+              } ${isAfter ? "after" : ""}  `}
+            />
+          );
+        })}
       </Slider>
-      {/* <div className="flex">
-        <PrevArrow /> <NextArrow />
-      </div> */}
     </div>
   );
 }
