@@ -1,5 +1,9 @@
 import Slider from "react-slick";
+import { useRef } from "react";
+
 function Phase() {
+  const sliderRef = useRef(null);
+  const progressBarRef = useRef(null);
   const settings = {
     arrows: false,
     autoplay: true,
@@ -10,12 +14,21 @@ function Phase() {
     centerPadding: 0,
     adaptiveHeight: false,
     slidesToShow: 5,
+    // beforeChange: (current, next) => {
+    //   // setImageIndex(next);
+    //   const slider = sliderRef.current;
+    //   const progressBar = progressBarRef.current;
+    //   const slideWidth =
+    //     slider.offsetWidth / slider.querySelectorAll(".slider-slide").length;
+    //   const progressBarWidth = slideWidth * next;
+    //   progressBar.style.width = `${progressBarWidth}px`;
+    // },
     responsive: [
       {
-        breakpoint:1440,
-        settings:{
-          slidesToShow:4,
-        }
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 4,
+        },
       },
       {
         breakpoint: 480,
@@ -31,7 +44,7 @@ function Phase() {
 
   return (
     <div className="sm:w-[92%] mx-auto h-auto items-center">
-      <Slider {...settings} >
+      <Slider {...settings} ref={sliderRef}>
         <RoadmapCards
           phase={`PHASE ${0}${1}`}
           date={`October ${0}${9}, ${2022}`}
@@ -102,8 +115,12 @@ function RoadmapCards(props) {
 }
 
 function Footsteps() {
+   const progressBarRef = useRef(null);
   return (
-    <div className="rounded-lg border-dashed border-2 mx-2 sm:mx-auto my-4 border-[#ffffff35] px-4 sm:px-8 py-8 sm:w-[91%]">
+    <div
+      className="rounded-lg border-dashed border-2 mx-2 sm:mx-auto my-4 border-[#ffffff35] px-4 sm:px-8 py-8 sm:w-[91%]"
+      ref={progressBarRef}
+    >
       <div className="px-12 mx-2 py-6 bg-[url('./images/roadmap.png')] bg-repeat-x bg-center overflow-hidden"></div>
     </div>
   );
@@ -111,7 +128,7 @@ function Footsteps() {
 
 function Phaseindicator() {
   return (
-    <div className="relative">
+    <div className="relative ">
       <div className="sm:w-[99%] py-8 sm:px-12 sm:mx-2">
         <hr className="border-t border-slate-50/10"></hr>
       </div>

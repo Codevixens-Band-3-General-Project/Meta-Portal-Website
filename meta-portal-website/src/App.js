@@ -18,6 +18,10 @@ import ScrollToTop from "./components/ScrollToTop";
 const App = () => {
   return (
     <div className="App">
+      <div className= " relative">
+
+      <div className="blur w-[50%] sm:w-[60%] rounded-full  mx-auto"></div>
+      </div>
       <BrowserRouter>
         <Navbar />
         <Home />
@@ -31,11 +35,11 @@ const App = () => {
         <PageDivider />
         <Article />
         <PageDivider />
-        <Contact/>
+        <Contact />
         {/* <WalletSidebar/> */}
-        <ScrollToTop/>
+        <ScrollToTop />
         <Footer />
-       
+
         <Routes>
           <Route></Route>
 

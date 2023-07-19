@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
-/* @import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap'); */
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap");
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
@@ -11,7 +10,9 @@
 }
 .App {
   text-align: center;
-  background-color: #2a0e3e;
+  background-color: #3b0361;
+  position: relative;
+  /* z-index: 0; */
   min-height: 100vh;
   font-family: "Heebo", sans-serif;
 }
@@ -22,36 +23,45 @@
     /* -0.8px 1px 0 #dc03f0, */ 1px 1px 0 #c604d8;
 }
 
-/* .slick-slider .slick-next,
-.slick-slider {
-  height: 100%;
-} */
 .slick-slide div {
   margin: 0 0.3rem;
 }
+.App:before .blur {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  bottom: 50%;
+  transform: translate (-50%, -50%);
+  width: 250px;
+  height: 450px;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(216, 4, 188),
+    rgb(167, 4, 216)
+  );
+  filter: blur(100px);
+  z-index: -1;
+}
 .next {
   left: 60%;
-  top: 120%;
+  top: 110%;
 }
 .prev {
-  /* left:0; */
-  top: 120%;
+  top: 110%;
   right: 60%;
 }
-/* .slick-slider {
-  /* min-height:70vh;
-   padding: 2rem 0;  
-  overflow-y: visible !important;
-} */
-.slide {
-  transform: skewX(3deg) skewY(-10deg) rotate(4deg) translateY(-10px)
-    scale(0.98);
+.slide.after {
+  transform: skewX(3deg) skewY(-10deg) rotate(4deg) translateX(150px)
+    translateY(-10px) scale(0.98);
+  /* min-height: 30rem; */
   /* transform: scaleX(0.85) scaleY(0.85) rotateY(30deg); */
   /* transform-style:preserve-3d; */
   transition: transform 300ms;
 }
 .activeSlide {
-  transform: scale(1.1);
+  transform: scale(1.1) translateZ(0);
+
   /* z-index: 4; */
 }
 .arrow {
@@ -62,7 +72,7 @@
   /* position:absolute; */
   transform-style: preserve-3d;
 }
-.flip-card:hover{
+.flip-card:hover {
   transform: rotateY(180deg);
 }
 .front {
@@ -72,21 +82,5 @@
 .back {
   position: absolute;
   backface-visibility: hidden;
-  transform: rotateY(180deg);;
+  transform: rotateY(180deg);
 }
-/* .imageSlider,
-.slick-list {
-  height: 100%;
-} */
-/* .slick-list {
-  /* overflow-y: visible ;
-  overflow-x: hidden ; */
-/* height: 400px !important; */
-/* padding: 3.5rem 2rem !important; */
-/* display: flex; 
-  align-items:center;
-} */
-/* .roadmap {
-  height: 600px;
-  overflow-y: visible;
-} */
