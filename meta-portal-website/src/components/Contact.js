@@ -103,37 +103,27 @@ const Contact = () => {
           style={{ background: 'none' }}
         />
       </div>
-      <div className="flex">
-      <div className='flex-1'>
-        <label className="fn__checkbox">
-        {/* <input type="checkbox" class="appearance-none border border-gray-300 rounded-sm checked:bg-transparent checked:border-indigo-600 checked:border-opacity-100w-5 h-5 md:w-6 md:h-6 checked:ring-2 checked:ring-indigo-600 checked:ring-opacity-50 focus:outline-none focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"/> */}
+
+<div className="flex flex-row items-center gap-4">
+  <div className="flex-shrink-0">
+    <label className="fn__checkbox">
+      <input type="checkbox" className="form-select px-4 py-3 rounded-full" /> 
+    </label>
+  </div>
+  <div className='text-white'>
+    <p>
+      I’m okay with getting emails and having that activity tracked to
+      improve my experience.
+    </p>
+  </div>
+</div>
+
+</div>
+<Button onClick={() => console.log('Button clicked!')}className="flex justify-start ml-12 mx-12 my-12" >Send Message</Button>
 
 
-          <input type ="checkbox" class="form-select px-4 py-3 rounded-full "/> 
-        </label>
-        </div>
-        <div className='flex-1 text-white  flex justify-star'>
-            <p>
-              I’m okay with getting emails and having that activity tracked to
-              improve my experience.
-            </p>
-
-          </div>
-
-      </div>
-
-    </div>
-
-      <div className="my-12 mx-12 flex justify-start">
-        <Button onClick={() => console.log('Button clicked!')} className="mt-4">Send Message</Button>
-      </div>
-
-
-    <div className="returnmessage" data-success="Your message has been received, We will contact you soon." />
-    {/* <div className="empty_notice">
-      <span>! Please Fill Required Fields !</span>
-    </div> */}
   </form>
+
 </div>
 
 
