@@ -9,7 +9,6 @@ import { PictureCard } from "./Cards";
 import { useState } from "react";
 
 const images = [avt1, avt2, avt3, avt4, avt5, avt6];
-// const slider = React.useRef(null);
 
 function HeaderCar(props) {
   // const [sliderRef, setSliderRef] = useState(null);
@@ -17,10 +16,17 @@ function HeaderCar(props) {
   const NextArrow = ({ onClick }) => {
     return (
       <div
-        className="arrow next bg-transparent border border-[#ffffff35] cursor-pointer rounded-full py-1 px-2 text-[#fff]"
+        className=" arrow next
+cursor-pointer rounded-full text-[#ffffff79] text-base"
         onClick={onClick}
       >
-        {">"}
+        <div className="flex flex-row items-center justify-between gap-x-4 ">
+          <div className="bg-[#e7e5e505] rounded-full w-1/8 border-2 border-[#ffffff79] p-1"></div>
+          <div className="bg-[#e7e5e505] rounded-full border-2 border-[#ffffff79] px-3 py-1">
+            {">"}
+          </div>
+          <div className="bg-[#e7e5e505] rounded-full w-1/8 border-2 border-[#ffffff79] p-1"></div>
+        </div>
       </div>
     );
   };
@@ -28,31 +34,36 @@ function HeaderCar(props) {
   const PrevArrow = ({ onClick }) => {
     return (
       <div
-        // className="arrow prev bg-white cursor-pointer rounded-full p-1"
-        className="arrow next bg-transparent border border-[#ffffff35] cursor-pointer rounded-full py-1 px-2 text-[#fff]"
-
+        className="arrow prev 
+cursor-pointer text-[#ffffff79]"
         onClick={onClick}
       >
-        {"<"}
+        <div className="flex flex-row items-center justify-between gap-x-4 ">
+          <div className="bg-[#e7e5e505] rounded-full w-1/8 border-2 border-[#ffffff79] p-1"></div>
+          <div className="bg-[#e7e5e505] rounded-full border-2 border-[#ffffff79] px-3 py-1">
+            {"<"}
+          </div>
+          <div className="bg-[#e7e5e505] rounded-full w-1/8 border-2 border-[#ffffff79] p-1"></div>
+        </div>
       </div>
     );
   };
   const settings = {
-    // dots: true,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     infinite: true,
     lazyload: true,
     centerMode: true,
-    // className:"center",
-    // arrows:true,
     speed: 300,
-    centerPadding: "30px",
+    centerPadding: 0,
     slidesToShow: 3,
+    // className: "carousel",
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     // adaptiveHeight: true,
-    beforeChange: (current, next) => setImageIndex(next),
+    beforeChange: (current, next) => {
+      setImageIndex(next);
+    },
     responsive: [
       // {
       //   breakpoint:1024,
@@ -64,7 +75,6 @@ function HeaderCar(props) {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          arrows: false,
         },
       },
     ],
@@ -72,18 +82,26 @@ function HeaderCar(props) {
 
   // className="card flex flex-col sm:flex-row justify-around p-10"
   return (
-    <div className="w-[100%] sm:w-[80%] mx-auto sm:py-10 h-[500px]">
+    <div className="w-[100%] sm:w-[80%] mx-auto sm:py-10 min-h-[25rem] sm:min-h-[28rem]">
       <Slider {...settings}>
-        {images.map((image, index) => (
-          <PictureCard
-            img={image}
-            className={index === ImageIndex ? "slide activeSlide" : "slide"}
-          />
-        ))}
+        {images.map((image, index) => {
+          const isActive = ImageIndex === index;
+          const isBefore =
+            ImageIndex === index - 1 ||
+            (ImageIndex === 0 && index === images.length - 1);
+          const isAfter =
+            ImageIndex === index + 1 ||
+            (ImageIndex === images.length - 1 && index === 0);
+          return (
+            <PictureCard
+              img={image}
+              className={`min-h-[15rem] ${isActive ? "activeSlide" : ""} ${
+                isBefore ? "before" : ""
+              } ${isAfter ? "after" : ""}  `}
+            />
+          );
+        })}
       </Slider>
-      {/* <div className="flex">
-        <PrevArrow /> <NextArrow />
-      </div> */}
     </div>
   );
 }
