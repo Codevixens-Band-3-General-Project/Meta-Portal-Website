@@ -1,26 +1,25 @@
-import React from "react";
+import React,{useState} from "react";
 import { WalletCard } from "./Cards";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faInstagram,faFacebook,faTwitter} from '@fortawesome/free-solid-svg-icons';
-// import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook} from '@fortawesome/free-solid-svg-icons';
 import { faBehance, faFacebookF, faInstagram, faPinterestP, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 
 
+
 const LeftSidebar = ({ isOpen, onClose }) => {
+  const [activeItem, setActiveItem] = useState("");
+
   const handleWalletSelection = () => {
     onClose();
   };
+  const handleItemClick = (item) => {
+    setActiveItem(item);
+  };
+
   return (
     isOpen && (
       <div className="walletbox text-white">
-        {/* <div className="title_holder">
-          <h1 className="pb-8 sm:textl md:text-2xl">Connect Wallet</h1>
-          <p>Connect with one of our available wallet</p>
-          <p className="pb-8">providers or create a new one.</p>
-        </div> */}
         <div className="list_holder flex flex-col items-center justify-between gap-y-6 pb-8">
           <div>
             <WalletCard
@@ -37,26 +36,94 @@ const LeftSidebar = ({ isOpen, onClose }) => {
             />
           </div>
         </div>
+
         <ul className="text-white gap-y-6 pb-8">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">Mint Page</Link>
-            </li>
-            <li>
-              <Link to="/">Collection</Link>
-            </li>
-            <li>
-              <Link to="/">Pages</Link>
-            </li>
-            <li>
-              <Link to="/">Blog</Link>
-            </li>
-            <li>
-              <Link to="/">Blog Single</Link>
-            </li>
-          </ul>
+          <li>
+            <Link
+              to="/"
+              className={`${
+                activeItem === "Home" ? "border-b-4 border-purple-600" : ""
+              }`}
+              onClick={() => handleItemClick("Home")}
+            >
+              Home
+            </Link>
+          </li>
+
+          <li>
+            <a
+              href="https://preview.themeforest.net/item/metaportal-nft-portfolio-and-landing-page/full_screen_preview/38941507?_ga=2.268939377.1894052259.1687766924-1039897364.1682896096"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${
+                activeItem === "Mint Page" ? "border-b-4 border-purple-600" : ""
+              }`}
+              onClick={() => handleItemClick("Mint Page")}
+            >
+              Mint Page
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://preview.themeforest.net/item/metaportal-nft-portfolio-and-landing-page/full_screen_preview/38941507?_ga=2.268939377.1894052259.1687766924-1039897364.1682896096"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${
+                activeItem === "Collection" ? "border-b-4 border-purple-600" : ""
+              }`}
+              onClick={() => handleItemClick("Collection")}
+            >
+              Collection
+            </a>
+          </li>
+
+          
+          <li>
+            <a
+              href="https://preview.themeforest.net/item/metaportal-nft-portfolio-and-landing-page/full_screen_preview/38941507?_ga=2.268939377.1894052259.1687766924-1039897364.1682896096"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${
+                activeItem === "Pages" ? "border-b-4 border-purple-600" : ""
+              }`}
+              onClick={() => handleItemClick("Pages")}
+            >
+              Pages
+            </a>
+          </li>
+
+          
+          <li>
+            <a
+              href="https://preview.themeforest.net/item/metaportal-nft-portfolio-and-landing-page/full_screen_preview/38941507?_ga=2.268939377.1894052259.1687766924-1039897364.1682896096"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${
+                activeItem === "Blog" ? "border-b-4 border-purple-600" : ""
+              }`}
+              onClick={() => handleItemClick("Blog")}
+            >
+              Blog
+            </a>
+          </li>
+
+          
+          <li>
+            <a
+              href="https://preview.themeforest.net/item/metaportal-nft-portfolio-and-landing-page/full_screen_preview/38941507?_ga=2.268939377.1894052259.1687766924-1039897364.1682896096"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${
+                activeItem === "BlogSingle" ? "border-b-4 border-purple-600" : ""
+              }`}
+              onClick={() => handleItemClick("BlogSingle")}
+            >
+             Blog Single
+            </a>
+          </li>
+        </ul>
+      
         <div className="gap-y-6 pb-8">
         <p>Copyright 2022-Designed &</p>
           <p>Developed by Frnify</p>
