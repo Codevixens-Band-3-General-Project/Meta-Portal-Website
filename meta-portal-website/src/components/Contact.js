@@ -27,6 +27,7 @@ const Contact = () => {
           </p>
         </div>
 
+
         <div className="flex-1 sm:mb-8">
           <h4 className="label mb-2">Phone</h4>
           <p className="text-xl sm:text-3xl text-white">
