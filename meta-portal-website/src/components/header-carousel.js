@@ -5,10 +5,11 @@ import avt3 from "../images/avt3.jpg";
 import avt4 from "../images/avt4.jpg";
 import avt5 from "../images/avt5.jpg";
 import avt6 from "../images/avt6.jpg";
+import avt7 from "../images/avt7.png";
 import { PictureCard } from "./Cards";
 import { useState } from "react";
 
-const images = [avt1, avt2, avt3, avt4, avt5, avt6];
+const images = [avt2, avt3, avt4, avt5, avt6];
 
 function HeaderCar(props) {
   // const [sliderRef, setSliderRef] = useState(null);
@@ -82,23 +83,30 @@ cursor-pointer text-[#ffffff79]"
 
   // className="card flex flex-col sm:flex-row justify-around p-10"
   return (
-    <div className="w-[100%] sm:w-[80%] mx-auto sm:py-10 min-h-[25rem] sm:min-h-[28rem]">
+    <div className="w-[95%] sm:w-[80%] mx-auto sm:py-10 min-h-[15rem] sm:min-h-[27rem]">
       <Slider {...settings}>
         {images.map((image, index) => {
           const isActive = ImageIndex === index;
           const isBefore =
             ImageIndex === index - 1 ||
-            (ImageIndex === 0 && index === images.length - 1);
-          const isAfter =
-            ImageIndex === index + 1 ||
-            (ImageIndex === images.length - 1 && index === 0);
+            ImageIndex === images[images.length - 1];
+          const isAfter = ImageIndex === index + 1;
           return (
-            <PictureCard
-              img={image}
-              className={`min-h-[15rem] ${isActive ? "activeSlide" : ""} ${
-                isBefore ? "before" : ""
-              } ${isAfter ? "after" : ""}  `}
-            />
+            <div>
+              <PictureCard
+                img={image}
+                className={`${isActive ? "activeSlide" : ""} ${
+                  isBefore ? "before" : ""
+                } ${isAfter ? "after" : ""} h-[18rem] sm:h-[25rem] py-6 pb-2`}
+              />
+              <div
+                className={`${isActive ? "activeSlide" : ""} ${
+                  isBefore ? "before" : ""
+                } ${
+                  isAfter ? "after" : ""
+                }  shad`}
+              ></div>
+            </div>
           );
         })}
       </Slider>

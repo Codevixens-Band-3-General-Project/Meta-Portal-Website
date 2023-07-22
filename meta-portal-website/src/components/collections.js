@@ -1,4 +1,6 @@
 import { PictureCard, PictureCardsmall } from "./Cards";
+import { useState } from "react";
+import ReactCardFlip from "react-card-flip";
 import avt1 from "../images/avt1.jpg";
 import avt2 from "../images/avt2.jpg";
 import avt3 from "../images/avt3.jpg";
@@ -8,28 +10,115 @@ import avt6 from "../images/avt6.jpg";
 import avt7 from "../images/avt7.png";
 import Button from "./Button";
 function Collections(props) {
+  const [flip, setFlip] = useState(false);
   return (
     <div className="py-12">
       <h1 className="text-[#eff0f5] text-2xl text-center sm:text-4xl drop-shadow-[0_1px_1.3px_#cc00ff] font-[300] sm:py-12">
         OUR COLLECTION
       </h1>
       {/* // NFT COLLECTIONS */}
-      <div className=" py-10 px-2 sm:px-8 sm:py-12 md:px-12 gap-y-3">
-        <div className="relative flex gap-y-4 sm:items-end flex-col sm:flex-row justify-around sm:px-12 gap-x-6 sm:py-3 ">
-          <PictureCard
-            img={avt4}
-            className="front hover:rotateY-180"
-            style={{ transformStyle: "preserve-3d" }}
-          />
-          <PictureCardsmall img={avt2} />
-          <PictureCard img={avt3} />
-          <PictureCardsmall img={avt4} />
+      <div className=" py-10 px-2 sm:px-10 sm:py-12 md:px-12 gap-y-3">
+        <div className="relative flex gap-y-4 sm:items-end flex-col sm:flex-row justify-center sm:px-12 gap-x-3 sm:py-3 ">
+          <ReactCardFlip isFlipped={flip} flipDirection="horizontal">
+            <PictureCard
+              img={avt4}
+              className="hover:cursor-pointer"
+              onMouseEnter={() => setFlip(!flip)}
+            />
+            <PictureCard
+              img={avt2}
+              className="hover:cursor-pointer"
+              onMouseEnter={() => setFlip(!flip)}
+            />
+          </ReactCardFlip>
+          <ReactCardFlip isFlipped={flip} flipDirection="horizontal">
+            <PictureCardsmall
+              img={avt3}
+              className="hover:cursor-pointer"
+              onMouseDown={() => setFlip(!flip)}
+            />
+            <PictureCardsmall
+              img={avt5}
+              className="hover:cursor-pointer"
+              onMouseDown={() => setFlip(!flip)}
+            />
+          </ReactCardFlip>
+          <ReactCardFlip isFlipped={flip} flipDirection="horizontal">
+            <PictureCard
+              img={avt2}
+              className="hover:cursor-pointer"
+              onMouseLeave={() => setFlip(!flip)}
+            />
+            <PictureCard
+              img={avt3}
+              className="hover:cursor-pointer"
+              onMouseLeave={() => setFlip(!flip)}
+            />
+          </ReactCardFlip>
+          <ReactCardFlip isFlipped={flip} flipDirection="horizontal">
+            <PictureCardsmall
+              img={avt5}
+              className="hover:cursor-pointer"
+              onClick={() => setFlip(!flip)}
+            />
+            <PictureCardsmall
+              img={avt6}
+              className="hover:cursor-pointer"
+              onClick={() => setFlip(!flip)}
+            />
+          </ReactCardFlip>
         </div>
-        <div className="card  flex gap-y-4 sm:items-start flex-col sm:flex-row justify-around sm:px-12 sm:gap-x-6 py-3">
-          <PictureCardsmall img={avt5} />
-          <PictureCard img={avt6} classname="hover:rotate-90" />
-          <PictureCardsmall img={avt4} />
-          <PictureCard img={avt2} />
+
+        {/* // second collection */}
+        <div className="flex gap-y-4 sm:items-start flex-col sm:flex-row justify-center sm:px-12 sm:gap-x-3 py-3">
+          <ReactCardFlip isFlipped={flip} flipDirection="horizontal">
+            <PictureCardsmall
+              img={avt6}
+              className="hover:cursor-pointer"
+              onClick={() => setFlip(!flip)}
+            />
+            <PictureCardsmall
+              img={avt4}
+              className="hover:cursor-pointer"
+              onClick={() => setFlip(!flip)}
+            />
+          </ReactCardFlip>
+          <ReactCardFlip isFlipped={flip} flipDirection="horizontal">
+            <PictureCard
+              img={avt4}
+              className="hover:cursor-pointer"
+              onMouseEnter={() => setFlip(!flip)}
+            />
+            <PictureCard
+              img={avt2}
+              className="hover:cursor-pointer"
+              onMouseEnter={() => setFlip(!flip)}
+            />
+          </ReactCardFlip>
+          <ReactCardFlip isFlipped={flip} flipDirection="horizontal">
+            <PictureCardsmall
+              img={avt2}
+              className="hover:cursor-pointer"
+              onMouseDown={() => setFlip(!flip)}
+            />
+            <PictureCardsmall
+              img={avt3}
+              className="hover:cursor-pointer"
+              onMouseDown={() => setFlip(!flip)}
+            />
+          </ReactCardFlip>
+          <ReactCardFlip isFlipped={flip} flipDirection="horizontal">
+            <PictureCard
+              img={avt2}
+              className="hover:cursor-pointer"
+              onMouseLeave={() => setFlip(!flip)}
+            />
+            <PictureCard
+              img={avt3}
+              className="hover:cursor-pointer"
+              onMouseLeave={() => setFlip(!flip)}
+            />
+          </ReactCardFlip>
         </div>
       </div>
       <div className="flex flex-col justify-evenly gap-y-4 items-center sm:p-8 sm:w-4/5 text-center sm:mx-auto">
