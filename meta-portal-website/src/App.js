@@ -15,8 +15,8 @@ import ScrollToTop from "./components/ScrollToTop";
 const App = () => {
   return (
     <div className="App">
+      <div className="blob w-[50%] sm:w-[50%] h-[400px] rounded-full fixed top-0 right-0 left-0 bottom-0 -z-[1] blur-3xl bg-opacity-10 grad mx-auto  "></div>
       <Navbar />
-
       <section id="home">
         <Home />
       </section>

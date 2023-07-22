@@ -1,13 +1,11 @@
-
 import HeaderCar from "./header-carousel";
 import Statistics from "./statistics";
 import Button from "./Button";
 
-
 function Home(props) {
   return (
     <div className="py-12">
-      <h1 className="text-[#eff0f5] text-2xl text-center py-2 sm:py-8 sm:text-5xl drop-shadow-[0_1px_1.3px_#cc00ff] font-[300]">
+      <h1 className="text-[#eff0f5] tracking-wide text-4xl text-center py-2 sm:py-8 sm:text-5xl drop-shadow-[0_1px_1.3px_#cc00ff] font-[300]">
         META LEGENDS
       </h1>
       <HeaderCar />

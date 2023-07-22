@@ -23,21 +23,56 @@ export const TextCard = (props) => {
 };
 
 // PICTURE CARD
-export const PictureCard = ({ img, style, className }) => {
+export const PictureCard = ({
+  img,
+  style,
+  className,
+  onClick,
+  onMouseEnter,
+  onMouseDown,
+  onMouseLeave,
+}) => {
   return (
-    <div
-      className={`bg-transparent rounded-2xl w-2/8 border border-[#ffffff35] p-5 ${className} `}
-    >
-      <img src={img} alt="nft images" className="rounded-2xl" />
+    <div className={`${className}`}>
+      <div
+        className={`bg-transparent rounded-2xl w-2/8 border border-[#ffffff35] p-5 `}
+      >
+        <img
+          src={img}
+          alt="nft images"
+          className="rounded-2xl"
+          onClick={onClick}
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+          onMouseDown={onMouseDown}
+        />
+      </div>
+      {/* <div className="w-1/8 shadow-[0_5px_20px] my-3 mx-auto h-2"></div> */}
     </div>
   );
 };
-export const PictureCardsmall = ({ img, style, className }) => {
+export const PictureCardsmall = ({
+  img,
+  style,
+  className,
+  onMouseEnter,
+  onMouseLeave,
+  onMouseDown,
+  onClick,
+}) => {
   return (
     <div
-      className={`bg-transparent rounded-2xl w-2/8 sm:w-2/5 border border-[#ffffff35] p-3 ${style}`}
+      className={`bg-[#d8d0d01c] rounded-2xl w-2/8 sm:w-4/5 border mx-auto border-[#ffffff35] p-3 ${style}`}
     >
-      <img src={img} alt="nft images" className="rounded-2xl" />
+      <img
+        src={img}
+        alt="nft images"
+        className="rounded-2xl"
+        onClick={onClick}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        onMouseDown={onMouseDown}
+      />
     </div>
   );
 };
